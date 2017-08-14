@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 iOS CSS theme styles-->
+    <link rel="stylesheet" href="assets/vendor/framework7/dist/css/framework7.ios.min.css">
+    <!-- Path to Framework7 iOS related color styles -->
+    <link rel="stylesheet" href="assets/vendor/framework7/dist/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="assets/vendor/framework7-icons/css/framework7-icons.css">
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="assets/css/spaces.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <div class="login-screen modal-in">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="text-center p-t-100">
+              <img src="/assets/img/box-success.png" width="200px"/>
+            </div>
+            <div class="login-screen-title">Accede a tu cuenta</div>
+            <form>
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <input type="text" name="username" placeholder="Your username">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <input type="password" name="password" placeholder="Your password">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block">
+                <a href="javascript:login();" class="button">Acceder</a>
+              </div>
+              <div class="content-block text-center">
+                <small>INTRODUCE TU CORREO ELECTRÓNICO Y CONTRASEÑA PARA ACCEDER A TU CUENTA</small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="views">
+      <div class="view view-main">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Pedidos Nuevos</div>
+          </div>
+        </div>
+
+        <div class="pages navbar-through toolbar-through">
+          <div data-page="index" class="page">
+            <div class="page-content">
+              <div class="content-block-title">Pedidos Nuevos (5)</div>
+              <div class="list-block media-list order-list">
+                <ul>
+                  <li>
+                    <a href="/orders/new/order/index.html" class="item-link item-content">
+                      <div class="item-media">
+                        <img src="/assets/img/order.png" width="64px"/>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title">#AE-2239900</div>
+                        </div>
+                        <span data-progress="10" class="progressbar color-red"></span>
+
+                        <div class="item-subtitle">Martha Kent</div>
+                        <div class="address-text">
+                          <small>4 Goldfield Rd.<br/>Chevy Chase.<br/>
+                          MD 20815</small>
+                        </div>
+                        <div class="item-subtitle">2 Productos</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="tab2" data-page="index" class="page tab">
+            <div class="page-content">
+              <div class="content-block-title">Pedidos Servidos</div>
+              <div class="list-block media-list order-list">
+                <ul>
+                  <li>
+                    <a href="/orders/new/order/index.html" class="item-link item-content">
+                      <div class="item-media">
+                        <img src="/assets/img/order.png" width="64px"/>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title">#AE-2239900</div>
+                        </div>
+                        <span data-progress="10" class="progressbar color-red"></span>
+
+                        <div class="item-subtitle">Martha Kent</div>
+                        <div class="address-text">
+                          <small>4 Goldfield Rd.<br/>Chevy Chase.<br/>
+                          MD 20815</small>
+                        </div>
+                        <div class="item-subtitle">2 Productos</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+              <a href="#tab1" class="tab-link">
+                  <i class="f7-icons">box</i>
+                  <span class="tabbar-label">Nuevos (5)</span>
+              </a>
+              <a href="#tab2" class="link">
+                  <i class="f7-icons">check_round</i>
+                  <span class="tabbar-label">Servidos</span>
+              </a>
+              <a href="/account/index.html" class="tab-link">
+                  <i class="f7-icons">person</i>
+                  <span class="tabbar-label">Cuenta</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="assets/vendor/framework7/dist/js/framework7.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 iOS CSS theme styles-->
+    <link rel="stylesheet" href="assets/vendor/framework7/dist/css/framework7.ios.min.css">
+    <!-- Path to Framework7 iOS related color styles -->
+    <link rel="stylesheet" href="assets/vendor/framework7/dist/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="assets/vendor/framework7-icons/css/framework7-icons.css">
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="assets/css/spaces.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views -->
+    <div class="views">
+      <!--<div class="view view-main">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Pedidos Nuevos</div>
+          </div>
+        </div>
+
+        <div class="pages navbar-through toolbar-through">
+          <div data-page="index" class="page">
+            <div class="page-content">
+              <div class="content-block-title">Pedidos Nuevos (5)</div>
+              <div class="list-block media-list order-list">
+                <ul>
+                  <li>
+                    <a href="/orders/new/order/index.html" class="item-link item-content">
+                      <div class="item-media">
+                        <img src="/assets/img/order.png" width="64px"/>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title">#AE-2239900</div>
+                        </div>
+                        <span data-progress="10" class="progressbar color-red"></span>
+
+                        <div class="item-subtitle">Martha Kent</div>
+                        <div class="address-text">
+                          <small>4 Goldfield Rd.<br/>Chevy Chase.<br/>
+                          MD 20815</small>
+                        </div>
+                        <div class="item-subtitle">2 Productos</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+              <a href="/new/index.html" class="link">
+                  <i class="f7-icons">box</i>
+                  <span class="tabbar-label">Nuevos (5)</span>
+              </a>
+              <a href="/orders/index.html" class="link">
+                  <i class="f7-icons">check_round</i>
+                  <span class="tabbar-label">Servidos</span>
+              </a>
+              <a href="/account/index.html" class="link">
+                  <i class="f7-icons">person</i>
+                  <span class="tabbar-label">Cuenta</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    -->
+
+      <div class="views view-main">
+      <!-- Tab 1 - View 1, active by default -->
+      <div id="tab1" class="view tab active">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center">View 1</div>
+          </div>
+        </div>
+        <div class="pages navbar-fixed">
+          <div data-page="home-1" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is view 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tab 2 - View 2 -->
+      <div id="tab2" class="view tab">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center">View 2</div>
+          </div>
+        </div>
+        <div class="pages navbar-fixed">
+          <div data-page="home-2" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is view 2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tab 2 - View 3 -->
+      <div id="tab3" class="view tab">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center">View 3</div>
+          </div>
+        </div>
+        <div class="pages navbar-fixed">
+          <div data-page="home-3" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>This is view 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tab bar with tab links -->
+      <div class="toolbar tabbar">
+        <div class="toolbar-inner">
+          <a href="#tab1" class="tab-link active">1</a>
+          <a href="#tab2" class="tab-link">2</a>
+          <a href="#tab3" class="tab-link">3</a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="assets/vendor/framework7/dist/js/framework7.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="assets/js/app.js"></script>
+  </body>
+</html>
