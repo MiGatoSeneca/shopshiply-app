@@ -4,7 +4,7 @@
     "pickinLimit" : "13/8/2017 6:05",
     "picked" : "13/8/2017 6:05",
     "shipping" : {
-      "name" : "Martha Kent",
+      "name" : "Federica Victoria",
       "address" : "4 Goldfield Rd.",
       "city" : "Chevy Chase",
       "state" : "MD",
@@ -13,19 +13,19 @@
     "linesCount" : 2,
     "lines" : [
       {
-        "name" : "Vestido Floral CMR",
+        "name" : "Vestido Floral",
         "reference" : "REF. 132090034 - STRIPES",
-        "thumbnail" : "http://www.okycoky.net/media/shop/covers-new/5438-PORC-1.jpg",
-        "image" : "http://www.okycoky.net/media/shop/covers-new/5438-PORC-1.jpg",
-        "price" : "59,99€",
+        "thumbnail" : "http://www.okycoky.net/media/shop/covers-new/5438-FEDR-1.jpg",
+        "image" : "http://www.okycoky.net/media/shop/covers-new/5438-FEDR-1.jpg",
+        "price" : "9,99€",
         "details" : "Negro<br/>M"
       },
       {
-        "name" : "Falda Lisa CMR",
+        "name" : "Chaqueta Lisa",
         "reference" : "REF. 132090032 - STRIPES",
         "thumbnail" : "http://www.okycoky.net/media/shop/covers-new/5438-PORC-1.jpg",
         "image" : "http://www.okycoky.net/media/shop/covers-new/5438-PORC-1.jpg",
-        "price" : "29,99€",
+        "price" : "59,99€",
         "details" : "Blanco<br/>L"
       }
     ]
