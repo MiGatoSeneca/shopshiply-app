@@ -101,14 +101,10 @@ function forcePickedOrderUpdate(){
     success: function(data) {
       pickedOrders = data;
       loadPickedOrders();
-
     }
   });
 
 
-}
-function cancelPickedOrderUpdate(){
-  loadPickedOrders();
 }
 
 
@@ -203,23 +199,6 @@ function loadPickedOrder(){
 
 }
 
-
-
-
-function pickedOrderPick(){
-  pickedView.router.loadPage('/orders/picked/order/pick/index.html');
-}
-
-
-function proccessPickedOrder(){
-  console.log("proccessPickedOrder");
-  var order = pickedOrders[selectedPickedOrderIdOrder];
-  delete pickedOrders[selectedPickedOrderIdOrder];
-  pickedOrders[selectedPickedOrderIdOrder] = order;
-  pickedOrders[selectedPickedOrderIdOrder].picked = moment('D/M/Y H:m');
+function cancelPickedOrderUpdate(){
   loadPickedOrders();
-  loadPickedOrders();
-  $("#page-picked-order-picking .loading").addClass('hidden');
-  $("#page-picked-order-picking .success").removeClass('hidden');
-
 }
