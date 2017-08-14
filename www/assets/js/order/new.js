@@ -115,7 +115,17 @@ function loadNewOrderLineImage(){
 
 }
 
+
+setTimeout(function(){
+  $("#new-order-alert").removeClass('hidden');
+}, 60000);
+
 function forceNewOrderUpdate(){
+  $("#new-order-alert").addClass('hidden');
+  setTimeout(function(){
+    $("#new-order-alert").removeClass('hidden');
+  }, 60000);
+
   $("#page-new .content").addClass('hidden');
   $("#page-new .content-empty").addClass('hidden');
   $("#page-new .loading").removeClass('hidden');
