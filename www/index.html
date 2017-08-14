@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>shopshiply</title>
+    <!-- Path to Framework7 iOS CSS theme styles-->
+    <link rel="stylesheet" href="assets/vendor/framework7/dist/css/framework7.ios.min.css">
+    <!-- Path to Framework7 iOS related color styles -->
+    <link rel="stylesheet" href="assets/vendor/framework7/dist/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="assets/vendor/framework7-icons/css/framework7-icons.css">
+    <link rel="stylesheet" href="assets/vendor/montserrat-webfont/css/montserrat-webfont.css">
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="assets/css/spaces.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <div class="login-screen modal-in">
+      <div class="view">
+        <div class="page" id='login-screen'>
+          <div class="page-content login-screen-content">
+            <div class="text-center p-t-100">
+              <img src="/assets/img/logo-inner.png" width="200px"/>
+            </div>
+            <div class='loading'>
+              <div class='text-center m-t-50'>
+                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="64px" viewBox="0 0 128 128" xml:space="preserve">
+                  <g>
+                    <path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#6d6d72" fill-opacity="1"/>
+                    <animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class='content hidden'>
+              <div class="login-screen-title"><b>Accede a tu cuenta</b></div>
+              <form>
+                <div class="list-block">
+                  <ul>
+                    <li class="item-content">
+                      <div class="item-inner">
+                        <div class="item-input">
+                          <input type="email" name="email" placeholder="Correo Electrónico">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content">
+                      <div class="item-inner">
+                        <div class="item-input">
+                          <input type="password" name="password" placeholder="Contraseña">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content-block text-center">
+                  <small>INTRODUCE TU CORREO ELECTRÓNICO Y CONTRASEÑA PARA ACCEDER A TU CUENTA</small>
+                </div>
+                <div class="content-block">
+                  <a href="javascript:login();" class="button">Acceder</a>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="statusbar-overlay"></div>
+
+    <div class="views tabs toolbar-through">
+
+      <div id="new" class="view view-main tab active">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Pedidos Nuevos</div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="new" id='page-new' class="page">
+            <div class="page-content">
+              <div class="loading">
+                <div class='content-block text-center m-t-50'>
+                  <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="64px" viewBox="0 0 128 128" xml:space="preserve">
+                    <g>
+                      <path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#6d6d72" fill-opacity="1"/>
+                      <animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform>
+                    </g>
+                  </svg>
+                  <h1>Cargando Pedidos</h1>
+                  <p class='small'>
+                    SE ESTÁN CARGANDO NUEVOS PEDIDOS DESDE EL SERVIDOR<br/>
+                    ESTA OPERACIÓN PUEDE LLEVAR UNOS SEGUNDOS
+                  </p>
+                  <a href='javascript:cancelNewOrderUpdate()' class='button'>Cancelar</a>
+
+                </div>
+              </div>
+              <div class='content-empty hidden'>
+                <div class='content-block'>
+                  <div class='text-center'>
+                    <img src="/assets/img/box.png" width="200px"/>
+                    <h1>No hay pedidos nuevos</h1>
+                    <p>NO HAY NINGÚN PEDIDO PENDIENTE PARA SERVIR VUELVE A INTENTARLO MÁS TARDE</p>
+                    <a href='javascript:loadNewOrders()' class='button'>Recargar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="content hidden">
+                <a href="javascript:forceNewOrderUpdate()" class='button button-fixed-top'>Nuevos pedidos - Pulsa para actualizar</a>
+                <div class="content-block-title">Pedidos Nuevos <span class='new-count'></span></div>
+                <div class="list-block media-list order-list">
+                  <ul id='new-list'>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div id="picked" class="view view-picked tab">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Pedidos Servidos</div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="picked" id="page-picked" class="page">
+            <div class="page-content">
+              <div class="loading">
+                <div class='content-block text-center m-t-50'>
+                  <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="64px" viewBox="0 0 128 128" xml:space="preserve">
+                    <g>
+                      <path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#6d6d72" fill-opacity="1"/>
+                      <animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform>
+                    </g>
+                  </svg>
+                  <h1>Cargando Servidos</h1>
+                  <p class='small'>
+                    SE ESTÁN CARGANDO LOS PEDIDOS SERVIDOS DESDE EL SERVIDOR<br/>
+                    ESTA OPERACIÓN PUEDE LLEVAR UNOS SEGUNDOS
+                  </p>
+                  <a href='javascript:cancelPickedOrderUpdate()' class='button'>Cancelar</a>
+
+                </div>
+              </div>
+              <div class='content-empty hidden'>
+                <div class='content-block'>
+                  <div class='text-center'>
+                    <img src="/assets/img/box.png" width="200px"/>
+                    <h1>No hay pedidos servido</h1>
+                    <p>NO HAY NINGÚN PEDIDO SERVIDO CUANDO SIRVAS UN PEDIDO APARECERÁ EN ESTA LISTA</p>
+                    <a href='javascript:loadNewOrders()' class='button'>Recargar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="content hidden">
+                <div class="content-block-title">Pedidos Nuevos <span class='picked-count'></span></div>
+                <div class="list-block media-list order-list">
+                  <ul id="picked-list">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="account" class="view view-account tab">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Mi Cuenta</div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="account" class="page">
+            <div class="page-content">
+              <div class="content-block-title">Cuenta</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <a href="/account/location/index.html" class="item-link item-content">
+                      <div class="item-media"><i class="f7-icons">navigation</i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Localización</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/account/notifications/index.html" class="item-link item-content">
+                      <div class="item-media"><i class="f7-icons">bell</i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Notificaciones</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/account/password/index.html" class="item-link item-content">
+                      <div class="item-media"><i class="f7-icons">lock</i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Cambiar Contraseña</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block-title">Sessión</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <a href="#" class="item-link item-content">
+                      <div class="item-media"><i class="f7-icons">logout</i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Cerrar Sesión</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner">
+          <a href="#new" class="tab-link active">
+            <i class="f7-icons">box</i>
+            <span class="tabbar-label">Nuevos <span id='tabbar-new-order-count'></span></span>
+          </a>
+          <a href="#picked" class="tab-link">
+            <i class="f7-icons">check_round</i>
+            <span class="tabbar-label">Servidos</span>
+          </a>
+          <a href="#account" class="tab-link">
+            <i class="f7-icons">person</i>
+            <span class="tabbar-label">Cuenta</span>
+          </a>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="assets/vendor/framework7/dist/js/framework7.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/moment/min/moment-with-locales.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="assets/js/order/new.js"></script>
+    <script type="text/javascript" src="assets/js/order/picked.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+  </body>
+</html>

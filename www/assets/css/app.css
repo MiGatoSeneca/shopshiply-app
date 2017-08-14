@@ -1,0 +1,81 @@
+body{
+  font-family: 'Montserrat' !important;
+}
+.small{
+  font-size: 75%;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.pull-right{
+  float:right;
+}
+.pull-left{
+  float:left;
+}
+.button{
+  font-size: 20px;
+  border:0px;
+  background-color: #60C4BA;
+  height:52px;
+  line-height:52px;
+  color:white;
+  border-radius: 0px;
+}
+.button-inactive{
+  background-color: #cccccc;
+}
+.button-fixed-top{
+  font-size: 14px;
+  height:32px;
+  line-height:32px;
+}
+
+.hidden{
+  display: none;
+}
+.visible{
+  display:block;
+}
+
+
+.order-list li.media-item .item-link .item-title-row, .order-list.media-list .item-link .item-title-row{
+  background: none;
+}
+.item-block{
+  opacity: 0.5;
+  background: #efeff4;
+}
+
+.progressbar{
+  margin:5px 0px;
+  height: 5px;
+  border-radius: 0px;
+}
+.order-list .address-text {
+  font-size: 12px;
+  color: #8e8e93;
+  line-height: 14px;
+}
+
+
+.form-checkbox input[type=checkbox]:checked~i, label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox, label.label-checkbox input[type=radio]:checked+.item-media i.icon-form-checkbox{
+  background-color: #60C4BA;
+}
+i.icon.icon-back{
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2012%2020'%3E%3Cpath%20d%3D'M10%2C0l2%2C2l-8%2C8l8%2C8l-2%2C2L0%2C10L10%2C0z'%20fill%3D'%2360C4BA'%2F%3E%3C%2Fsvg%3E")
+}
+
+.tabbar.tabbar-hidden, .tabbar.toolbar-hidden, .toolbar.tabbar-hidden, .toolbar.toolbar-hidden{
+  display: none;
+}
+.progresstext{
+  float: right;
+  font-size:12px;
+}
