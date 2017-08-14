@@ -26,7 +26,7 @@ function loadPickedOrders(){
     html += "<li id='"+idOrder+"'>";
     html += "  <a href='javascript:selectPickedOrder(\""+idOrder+"\")' class='item-link item-content'>";
     html += "    <div class='item-media'>";
-    html += "      <img src='/assets/img/box.png' width='64px'/>";
+    html += "      <img src='/assets/img/box-success.png' width='64px'/>";
     html += "    </div>";
     html += "    <div class='item-inner'>";
     html += "      <div class='item-title-row'>";
